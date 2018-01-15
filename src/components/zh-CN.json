@@ -1,0 +1,46 @@
+{
+	"operation":{
+		"refresh":{
+			"enable": true,
+			"type": "primary",
+			"event": "",
+			"label": "提交"
+		},
+		"reset": {
+			"enable": true,
+			"type": "primary",
+			"event": "",
+			"label": "重置"
+		}
+	},
+	"itemArray": {
+		"username":{
+			"label": "用户名",
+			"hidden": true,
+			"value": "",
+			"defaultValue": "",
+			"rules": [
+				{
+          "required": true,
+          "pattern":"/^\\w+$/",
+					"message": "请输入用户名!",
+					"trigger": "blur"
+				}
+			]
+		},
+		"password":{
+			"label": "密 码",
+			"show" :true,
+			"value": "",
+			"defaultValue": "",
+			"rules": [
+				{
+          "required": true,
+          "pattern":"/^\\w+$/",
+					"message": "请输入密码!",
+					"trigger": "blur"
+				}
+			]
+		}
+	}
+}

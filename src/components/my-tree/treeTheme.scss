@@ -1,0 +1,22 @@
+$tree-item-height: 21px;
+.topoTree{
+	border:1px solid #d1dbe5;
+}
+.tree-item{ /* 单个节点的样式 */
+	margin-top:5px;
+	margin-bottom:5px;
+}
+/* 图标头样式 */
+.tree-icon-header{
+	margin-right: 5px;
+}
+.tree-icon{
+	height: $tree-item-height;
+	line-height: $tree-item-height;
+	vertical-align:middle;
+}
+/* 激活节点的样式 */
+.activeTreeItem{
+	// background-color:#20a0ff;
+	color: #20a0ff;
+}
