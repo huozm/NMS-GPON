@@ -1,15 +1,18 @@
 <template>
 <div class="login" id="ap">
-  <el-col>
-    <img src="../image/login.svg" style="
-    text-align: center;
-    max-width: 100%;
-    height: 600px;
-    margin-left: 30px;
-    margin-right: 0px;
-    margin-top:0px;
-">
-  </el-col>
+  <el-row>
+    <el-col>
+      <img src="../image/login.svg" style="
+      text-align: center;
+      max-width: 100%;
+      height: 600px;
+      margin-left: 30px;
+      margin-right: 0px;
+      margin-top:0px;
+  ">
+    </el-col>
+  </el-row>
+
   <el-form>
 
     <div class="group1">
@@ -156,7 +159,7 @@ p {
 
 form {
   position: absolute;
-  top: 55%;
+  top: 350px;
   left: 35%;
 }
 </style>
