@@ -1,7 +1,7 @@
 <template>
 <div class="login" id="ap">
-<el-col>
-  <img  src="../image/login.svg" style="
+  <el-col>
+    <img src="../image/login.svg" style="
     text-align: center;
     max-width: 100%;
     height: 600px;
@@ -9,11 +9,11 @@
     margin-right: 0px;
     margin-top:0px;
 ">
-</el-col>
+  </el-col>
   <el-form>
 
     <div class="group1">
-      <el-input type="text" id="user" v-model="formName.user"  placeholder="用户名"></el-input>
+      <el-input type="text" id="user" v-model="formName.user" placeholder="用户名"></el-input>
       <p>{{formName.userError}}</p>
 
       <el-col :span="3" class="button-icon">
@@ -22,7 +22,7 @@
     </div>
 
     <div class="group1">
-      <el-input type="password" id="password" v-model="formName.password"  placeholder="密码"></el-input>
+      <el-input type="password" id="password" v-model="formName.password" placeholder="密码"></el-input>
       <p>{{formName.passwordError}}</p>
 
       <el-col :span="3" class="button-icon">
@@ -76,34 +76,38 @@ export default {
         password = _this.formName.password;
 
       _this.$axios.post('/api/checkUser', null, {
-            transformRequest: [function (data) {
-              return Qs.stringify(data, {arrayFormat: 'brackets'})
-            }],
-            data: {
-                user: user,
-                password: password
-              }
-          })
-        .then(function (response) {
+          transformRequest: [function(data) {
+            return Qs.stringify(data, {
+              arrayFormat: 'brackets'
+            })
+          }],
+          data: {
+            user: user,
+            password: password
+          }
+        })
+        .then(function(response) {
 
-    if (_this.formName.user != ''&& _this.formName.password != ''&& response.data === true) {
+          if (_this.formName.user != '' && _this.formName.password != '' && response.data === true) {
             // _this.formName.userError = '登陆成功'
             console.log(response);
-            _this.$router.push({path:'/Home'});
-          }else if (_this.formName.user != ''&& _this.formName.password != ''&&response.data === false) {
+            _this.$router.push({
+              path: '/Home'
+            });
+          } else if (_this.formName.user != '' && _this.formName.password != '' && response.data === false) {
             _this.formName.userError = '用户名或密码错误'
             _this.formName.passwordError = '用户名或密码错误'
-          }else{
+          } else {
             _this.formName.userError = '用户名或密码为空'
             _this.formName.passwordError = '用户名或密码为空'
 
           }
 
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error)
         });
-     }
+    }
   }
 }
 </script>
@@ -149,9 +153,10 @@ p {
   position: absolute;
   top: 30px
 }
-form{
+
+form {
   position: absolute;
-  top: 350px;
+  top: 55%;
   left: 35%;
 }
 </style>
