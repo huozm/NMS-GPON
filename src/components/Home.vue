@@ -65,7 +65,8 @@
                   </span>
                   <el-dropdown-menu slot="dropdown" >
                     <el-dropdown-item command = "a">个人信息</el-dropdown-item>
-                    <el-dropdown-item command = "b">退出登录</el-dropdown-item>
+                    <el-dropdown-item command = "b">风格二</el-dropdown-item>
+                    <el-dropdown-item command = "c">退出登录</el-dropdown-item>
                   </el-dropdown-menu>
                 </el-dropdown>
             </span>
@@ -76,7 +77,7 @@
       :props="defaultProps"
       accordion
       @node-click="handleNodeClick"
-      style="width:315px;height:100%;margin-left:30px;position:absolute;margin-top:15px">
+      style="width:230px;height:100%;margin-left:30px;position:absolute;margin-top:15px;background-color:DCDFE6">
     </el-tree>
 
     <el-button-group  >
@@ -87,7 +88,7 @@
       <el-button type="primary" icon="el-icon-more"></el-button>
     </el-button-group>
 
-    <img src="../image/map.png" style="margin-left:300px;">
+    <img src="../image/map3.png" style="margin-left:255px;">
 
 </div>
 </template>
@@ -120,15 +121,19 @@ export default {
     },
   methods: {
     handleCommand(command) {
-      if (command === 'b') {
+      if (command === 'c') {
         this.$router.push({
           path: '/'
         });
-      } else {
+      } else if(command === 'a'){
         this.$alert('用户名:root  密码:public', '个人信息', {
           confirmButtonText: '确定'
         })
 
+      }else{
+        this.$router.push({
+          path:'/HomeOne'
+        })
       }
     },
     handleNodeClick(data) {
@@ -149,7 +154,7 @@ body{
    position:relative;
 }
 .el-button-group{
-  padding-right: 385px;
+  padding-right: 550px;
 
 }
 .el-button--primary{

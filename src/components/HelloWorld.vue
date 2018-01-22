@@ -77,6 +77,15 @@ export default {
       var _this = this
       var user = _this.formName.user,
         password = _this.formName.password;
+        // const loading = _this.$loading({
+        //   lock: true,
+        //   text: 'Loading',
+        //   spinner: 'el-icon-loading',
+        //   background: 'rgba(0, 0, 0, 0.7)'
+        // });
+        // setTimeout(() => {
+        //   loading.close();
+        // },1000);
 
       _this.$axios.post('/api/checkUser', null, {
           transformRequest: [function(data) {
@@ -95,7 +104,7 @@ export default {
             // _this.formName.userError = '登陆成功'
             console.log(response);
             _this.$router.push({
-              path: '/Home'
+              path: '/HomeTwo'
             });
           } else if (_this.formName.user != '' && _this.formName.password != '' && response.data === false) {
             _this.formName.userError = '用户名或密码错误'
