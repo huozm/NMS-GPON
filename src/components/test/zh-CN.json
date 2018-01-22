@@ -1,0 +1,54 @@
+{
+  "common": {
+    "title": {
+      "label": "普通登陆"
+    },
+    "operation": {
+      "login": {
+        "label": "登陆",
+        "footer": "点击登陆即表示已阅读并同意",
+        "server": "服务协议"
+      }
+    },
+    "itemArray": {
+       "username": {
+         "show": true,
+         "label": "",
+         "placeholder": "请输入手机号",
+         "value": ""
+       },
+       "password": {
+         "show": true,
+         "label": "忘记密码",
+         "placeholder": "请输入密码",
+         "value": ""
+       }
+    }
+  },
+  "message": {
+    "title": {
+      "label": "短信登陆"
+    },
+    "operation": {
+      "login": {
+        "label": "登陆",
+        "footer": "点击登陆即表示已阅读并同意",
+        "server": "服务协议"
+      }
+    },
+    "itemArray": {
+       "username": {
+         "show": true,
+         "label": "",
+         "placeholder": "请输入手机号",
+         "value": ""
+       },
+       "verificationCode": {
+         "show": true,
+         "label": "获取验证码",
+         "placeholder": "请输入验证码",
+         "value": ""
+       }
+    }
+  }
+}

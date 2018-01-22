@@ -3,7 +3,7 @@
   <el-menu
     class="el-menu-demo"
     mode="horizontal"
-    background-color="#545c64"
+    background-color="#009999"
     text-color="#fff"
     active-text-color="#ffd04b">
 <img src="../image/navLogo.png"  style="position:absolute;left:-10px;margin:7px">
@@ -77,18 +77,24 @@
       :props="defaultProps"
       accordion
       @node-click="handleNodeClick"
-      style="width:230px;height:100%;margin-left:30px;position:absolute;margin-top:15px;background-color:DCDFE6">
+      style="min-height:595px;background-color:#DCDFE6;width:250px;">
     </el-tree>
 
-    <el-button-group  >
+    <!-- <el-button-group  >
       <el-button type="primary" icon="el-icon-location"></el-button>
       <el-button type="primary" icon="el-icon-zoom-in"></el-button>
       <el-button type="primary" icon="el-icon-zoom-in"></el-button>
       <el-button type="primary" icon="el-icon-share"></el-button>
       <el-button type="primary" icon="el-icon-more"></el-button>
-    </el-button-group>
+    </el-button-group> -->
 
-    <img src="../image/map3.png" style="margin-left:255px;">
+    <img src="../image/map7.png" style="  position: absolute;
+      left: 250px;
+      top:65px">
+
+      <div class="zi">
+      <p>{{messages}}</p>
+      </div>
 
 </div>
 </template>
@@ -116,7 +122,8 @@ export default {
         defaultProps: {
           children: 'children',
           label: 'label'
-        }
+        },
+        messages:'Copyright © 2017-2018 SinoTelecom版本所有'
       };
     },
   methods: {
@@ -153,15 +160,15 @@ body{
   padding-left: 120px;
    position:relative;
 }
-.el-button-group{
+/* .el-button-group{
   padding-right: 550px;
 
-}
-.el-button--primary{
+} */
+/* .el-button--primary{
 background-color:#545c64;
 color:#fff;
 border-color:#545c64
-}
+} */
 .alarm1{
   margin:22px;
   margin-left:0px
@@ -181,5 +188,14 @@ border-color:#545c64
 .alarm5{
     margin: 22px;
     margin-left: 30px
+}
+.zi{
+  height: 49px;
+  width: 1115px;
+  background-color: #009999;
+  position: absolute;
+  left:250px;
+  bottom: 2px;
+  text-align: center;
 }
 </style>

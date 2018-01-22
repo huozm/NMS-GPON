@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: #EBEBEB;min-height:650px">
+    <div style="background-color: #EBEBEB;min-height:570px">
         <div style="width:100%;background-color: #009999; overflow: hidden;height:50px">
             <span class="demonstration" style="float:left;padding-top:14px;color:white;margin-left:7%">
                 首页
@@ -49,7 +49,7 @@
                 <el-col :xs="4" :sm="4" :md="4" :lg="4">
                     <div>
 
-      <el-menu default-active="1" class="el-menu-vertical-demo" style="min-height:650px;background-color:#DCDFE6">
+      <el-menu default-active="1" class="el-menu-vertical-demo" style="min-height:590px;background-color:#DCDFE6">
         <el-submenu index="1">
           <template slot="title">系统管理</template>
           <el-menu-item index="1-1">网管版本号</el-menu-item>
@@ -86,13 +86,13 @@
                     <div>
                         <div style="border: 1px solid #A6A6A6; border-radius:6px; padding:5px; margin:2px; background-color: white;position:relative; ">
                             <el-breadcrumb separator="/">
-                                <el-breadcrumb-item v-for="item in breadcrumbItems">{{item}}</el-breadcrumb-item>
+                                <el-breadcrumb-item >{{item}}</el-breadcrumb-item>
                             </el-breadcrumb>
                         </div>
                     </div>
                 </el-col>
             </el-row>
-              <img src="../image/map1.png" style=" position:absolute;top:100px;left:220px">
+              <img src="../image/map2.png" style=" position:absolute;top:90px;left:220px">
         </div>
     </div>
 
@@ -107,7 +107,8 @@
         data(){
             return {
                 searchCriteria: '',
-                breadcrumbItems: ['导航一'],
+                
+                item:'导航一'
             }
         },
 
