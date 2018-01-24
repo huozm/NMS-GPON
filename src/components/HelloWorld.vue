@@ -104,7 +104,7 @@ export default {
             // _this.formName.userError = '登陆成功'
             console.log(response);
             _this.$router.push({
-              path: '/HomeOne'
+              path: '/HomeTwo'
             });
           } else if (_this.formName.user != '' && _this.formName.password != '' && response.data === false) {
             _this.formName.userError = '用户名或密码错误'
