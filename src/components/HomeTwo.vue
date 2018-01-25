@@ -94,9 +94,9 @@ body{
 img{
   position: absolute;
   left: 200px;
-  bottom:0px;
-  top: 63px;
-  right: 0px
+
+   max-width: 100%;
+   overflow: hidden;
 }
 .el-menu{
   padding-left:51%;
