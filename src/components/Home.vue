@@ -3,10 +3,10 @@
   <el-menu
     class="el-menu-demo"
     mode="horizontal"
-    background-color="#009999"
+    background-color="#0099CC"
     text-color="#fff"
     active-text-color="#ffd04b">
-<img src="../image/navLogo.png"  style="position:absolute;left:-10px;margin:7px">
+<img src="../image/navLogo.png"  style="position:absolute;left:10px;margin:7px">
   <el-menu-item index="1">首页</el-menu-item>
       <el-submenu index="2">
         <template slot="title">系统管理</template>
@@ -58,7 +58,7 @@
   <img  src="../image/minor_round_efe034.png"  >
  </el-tooltip>
 
- <span class="demonstration" style="float:right;padding-top:22px;margin-right:5%">
+ <span class="demonstration" style="float:right;padding-top:20px;margin-right:2%">
                 <el-dropdown trigger="click" @command="handleCommand">
                   <span class="el-dropdown-link" style="color:white">
                     root<i class="el-icon-caret-bottom el-icon--right"></i>
@@ -157,7 +157,7 @@ body{
   margin: 0px;
 }
 .el-menu{
-  padding-left: 120px;
+  padding-left: 18%;
    position:relative;
 }
 /* .el-button-group{
@@ -170,29 +170,29 @@ color:#fff;
 border-color:#545c64
 } */
 .alarm1{
-  margin:22px;
+  margin:19px;
   margin-left:0px
 }
 .alarm2{
-  margin: 22px;
-  margin-left: 30px
+  margin: 19px;
+  margin-left: 15px
 }
 .alarm3{
-  margin: 22px;
-  margin-left: 33px
+  margin: 19px;
+  margin-left: 15px
 }
 .alarm4{
-    margin: 22px;
-    margin-left: 30px
+    margin: 19px;
+    margin-left: 15px
 }
 .alarm5{
-    margin: 22px;
-    margin-left: 30px
+    margin: 18px;
+    margin-left: 15px
 }
 .zi{
   height: 49px;
   width: 1115px;
-  background-color: #009999;
+  background-color: #0099CC;
   position: absolute;
   left:250px;
   bottom: 2px;

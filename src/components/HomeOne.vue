@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #EBEBEB;min-height:570px">
-        <div style="width:100%;background-color: #009999; overflow: hidden;height:50px">
+        <div style="width:100%;background-color: #0099CC; overflow: hidden;height:50px">
             <span class="demonstration" style="float:left;padding-top:14px;color:white;margin-left:7%">
                 首页
             </span>
@@ -107,7 +107,7 @@
         data(){
             return {
                 searchCriteria: '',
-                
+
                 item:'导航一'
             }
         },

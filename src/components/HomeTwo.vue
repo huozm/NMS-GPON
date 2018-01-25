@@ -47,7 +47,7 @@
       :props="defaultProps"
       accordion
 
-      style="min-height:600px;background-color:#DCDFE6;width:200px;">
+      style="position:absolute;bottom:0px;top:60px;background-color:#DCDFE6;width:200px;">
     </el-tree>
     <img src="../image/map6.png" >
     <div class="zi">
@@ -94,7 +94,9 @@ body{
 img{
   position: absolute;
   left: 200px;
-  bottom:55px
+  bottom:0px;
+  top: 63px;
+  right: 0px
 }
 .el-menu{
   padding-left:51%;
@@ -102,16 +104,17 @@ img{
 }
 .zi{
   height: 50px;
-  width: 1165px;
+
   background-color: #009999;
   position: absolute;
   left:200px;
-  bottom: 2px;
+  bottom: 0px;
+  right: 0px;
   text-align: center;
 }
 h1{
   position:absolute;
-  left:10px;
+  left:2%;
   margin:7px;
   color: #fafafa;
   font-style: italic;

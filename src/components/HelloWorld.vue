@@ -38,7 +38,7 @@
     </div>
 
     <div class="group1">
-      <el-button type="primary" @click="submitForm('formName')" style="width:310px;min-height:40px;background:#1A3564;color:#FFF">登录</el-button>
+      <el-button type="primary" :plain="true" @click="submitForm('formName')" style="width:310px;min-height:40px;background:#1A3564;color:#FFF">登录</el-button>
     </div>
 
   </el-form>
@@ -102,16 +102,20 @@ export default {
 
           if (_this.formName.user != '' && _this.formName.password != '' && response.data === true) {
             // _this.formName.userError = '登陆成功'
+            _this.$message({
+            message: '登录成功',
+            type: 'success'
+          });
             console.log(response);
             _this.$router.push({
-              path: '/HomeOne'
+              path: '/HomeTwo'
             });
           } else if (_this.formName.user != '' && _this.formName.password != '' && response.data === false) {
-            _this.formName.userError = '用户名或密码错误'
-            _this.formName.passwordError = '用户名或密码错误'
+
+            _this.$message.error('用户名或密码错误');
           } else {
-            _this.formName.userError = '用户名或密码为空'
-            _this.formName.passwordError = '用户名或密码为空'
+
+              _this.$message.error('用户名或密码为空');
 
           }
 
