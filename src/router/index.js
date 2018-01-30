@@ -6,6 +6,7 @@ import Home from '../components/Home.vue'
 import HomeOne from '../components/HomeOne.vue'
 import HomeTwo from '../components/HomeTwo.vue'
 import HomeThree from '../components/HomeThree.vue'
+import HomeFour from '../components/HomeFour.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -15,21 +16,25 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
     },
-       {
-          path: '/Home',
-          component: Home
-      },
-      {
-    path:'/HomeOne',
-    component:HomeOne
-  },
-  {
-path:'/HomeTwo',
-component:HomeTwo
-  },
-  {
-path:'/HomeThree',
-component:HomeThree
-  }
+    {
+      path: '/Home',
+      component: Home
+    },
+    {
+      path:'/HomeOne',
+      component:HomeOne
+    },
+    {
+      path:'/HomeTwo',
+      component:HomeTwo
+    },
+    {
+      path:'/HomeThree',
+      component:HomeThree
+    },
+    {
+      path:'/HomeFour',
+      component: HomeFour
+    }
   ]
 })
