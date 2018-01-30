@@ -67,7 +67,7 @@
 
   <el-col :span="20">
     <div class="img">
-      <img src="../image/map6.png" >
+      <img class="img" v-bind:height="size.height" width="100%" src="../image/map6.png" >
     </div>
     <div class="zi" v-bind:style="">
       <span>{{messages}}</span>
@@ -103,8 +103,18 @@ export default {
         label: 'label'
       },
       message: 'SinoTelecom',
-      messages: 'Copyright © 2017-2018 SinoTelecom版本所有'
+      messages: 'Copyright © 2017-2018 SinoTelecom版本所有',
+      size: {
+        height: this.getContentHeigth() - 125,
+      }
     };
+  },
+  methods: {
+    getContentHeigth: function () {
+      var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      console.log(clientHeight);
+      return clientHeight;
+    }
   }
 }
 </script>
@@ -112,18 +122,21 @@ export default {
 <style lang="css">
 body{
   margin: 0px;
+  /* padding: 0px;
+  height: 100%; */
 }
 .all{
-  height: 100%;
+  /* height: 100%;
   width: 100%;
   margin:0;
-  padding:0;
+  padding:0; */
+
   background-color: #DCDFE6;
 }
 .ro{
 /* float: right; */
 position: relative;
-padding-left: 31%;
+padding-left: 32%;
 
 }
 .pp{
@@ -143,12 +156,12 @@ text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #
   /* height: 600px; */
   background-color:#DCDFE6;
 }
-img{
-  /* max-width: 100%;
-  overflow: hidden; */
+/* img{
+  max-width: 100%;
+  overflow: hidden;
   width: 100%;
  height: 100%;
-}
+} */
 .zi{
 /* position:fixed;
 left: 20px;
