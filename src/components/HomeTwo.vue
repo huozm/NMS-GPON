@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="all">
     <el-row>
       <el-col :span="6">
       <div class="pp">
@@ -64,11 +64,12 @@
       </el-tree>
     </div>
   </el-col>
+
   <el-col :span="20">
     <div class="img">
       <img src="../image/map6.png" >
     </div>
-    <div class="zi">
+    <div class="zi" v-bind:style="">
       <span>{{messages}}</span>
     </div>
   </el-col>
@@ -81,9 +82,9 @@
 /*eslint-disable*/
 
 export default {
-  data(){
+  data() {
     return {
-      data: [ {
+      data: [{
         label: '全局视图',
         children: [{
           label: '150(192.168.17.150)',
@@ -101,8 +102,8 @@ export default {
         children: 'children',
         label: 'label'
       },
-      message:'SinoTelecom',
-       messages:'Copyright © 2017-2018 SinoTelecom版本所有'
+      message: 'SinoTelecom',
+      messages: 'Copyright © 2017-2018 SinoTelecom版本所有'
     };
   }
 }
@@ -112,8 +113,13 @@ export default {
 body{
   margin: 0px;
 }
+.all{
+  background-color: #DCDFE6;
+}
 .ro{
-  float: right;
+/* float: right; */
+position: relative;
+padding-left: 31%;
 
 }
 .pp{
@@ -130,17 +136,26 @@ text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #
 }
 
 .el-tree{
-  height: 600px;
+  /* height: 600px; */
   background-color:#DCDFE6;
 }
 img{
-  max-width: 100%;
-  overflow: hidden;
+  /* max-width: 100%;
+  overflow: hidden; */
+  width: 100%;
+ height: 100%;
 }
 .zi{
+/* position:fixed;
+left: 20px;
+right:5px;
+bottom: 0px; */
   line-height: 60px;
   height: 60px;
   background-color: #009999;
   font-size: 18px;
+  /* position: absolute;
+  width: 83%;
+  bottom: 0px; */
 }
 </style>
