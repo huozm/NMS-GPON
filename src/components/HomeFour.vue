@@ -1,10 +1,10 @@
 <template lang="html">
-<div class="">
+<div>
   <el-row class="indexHead" style="background-color: #009999">
     <el-col :span="5">
       <div class="logo">{{ message }}</div>
     </el-col>
-    <el-col :span="19">
+    <el-col :span="19" >
       <el-menu mode="horizontal" background-color="#009999" text-color="#fff" active-text-color="#ffd04b">
         <!-- <el-menu-item index="1">首页</el-menu-item> -->
           <el-submenu index="2">
@@ -87,7 +87,7 @@ export default {
       message:'SinoTelecom',
       messages:'Copyright © 2017-2018 SinoTelecom版本所有',
       size: {
-        height: this.getContentHeigth() - 133,
+        height: this.getContentHeigth() - 115,
       }
     };
   },
@@ -102,19 +102,19 @@ export default {
 </script>
 
 <style lang="css">
-.body{
+body{
   margin: 0px;
-  padding: 0px;
 }
 .foot{
   height: 50px;
   background-color: #009999;
   width: 100%;
-
+  font-size: 18px;
+  line-height: 50px;
+  margin: 0px;
 }
 .version{
-
-  margin: auto;
+  margin: 0px;
 }
 .logo{
   margin:5px;
